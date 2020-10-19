@@ -45,11 +45,10 @@ function App() {
       <h1>Messenger</h1>
   <h2>Welcome {username}</h2>
     <form className="app__form">
-      <FormControl>
-        <InputLabel >Enter Message</InputLabel>
-          <Input value={input} onChange={event => setInput(event.target.value)} />
+      <FormControl className="app__formControl">
+          <Input className="app__input" placeholder="Enter a message"value={input} onChange={event => setInput(event.target.value)} />
           
-          <IconButton
+          <IconButton className="app__iconButton"
           disabled={!input} variant="contained" color="primary" type="submit" onClick={sendMessage} disableElevation>
           <SendIcon/>
           </IconButton>
